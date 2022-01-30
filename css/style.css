@@ -153,3 +153,135 @@ a{
 		display: none;
 	}
 }
+
+/* footer */
+footer {
+	background-color: #212121;
+	font-size: 16px;
+	line-height: 1.25em;
+	text-align: center;
+	min-height: 538px;
+}
+footer p, footer h3{
+	color: #fff;
+}
+
+.footer__logo {
+}
+
+.footer__logo img {
+	width: 200px;
+	height: 68px;
+	margin: 59px 0 16px 0;
+}
+.footer__social {
+	margin: 15px 0;
+}
+.footer__social h3 {
+	font-size: 24px;
+	margin: 15px 0 20px 0;
+}
+.footer__social-list {
+	display: grid;
+	list-style: none;
+	grid-template-areas: 
+		'vk inst yt fb';
+	/* grid-column-gap - отступы между колонками */
+	height: 41px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.social-list__item {}
+
+.footer__contact {
+	margin-bottom: 20px;
+}
+
+.footer__contact a {
+	text-decoration: none;
+	color: #fff;
+}
+.footer__contact-top {
+	margin-bottom: 15px;
+}
+
+.footer__contact-top a {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.footer__contact-bottom {}
+.footer__contact-bottom a {
+	font-size: 18px;
+}
+
+.footer__copy-top p {
+	margin-bottom: 18px;
+}
+
+.footer__copy-bottom p {
+	margin-bottom: 4px;
+}
+
+.footer__copy-bottom a {
+	font-weight: 500;
+	text-decoration: none;
+	color: #F24841;
+}
+
+/* Блоки для грида */
+
+.vk { grid-area: vk; }
+.inst { grid-area: inst; }
+.yt { grid-area: yt; }
+.fb { grid-area: fb; }
+
+
+
+/* медиа запросы для футера */
+
+@media (min-width: 750px)
+{
+	footer {
+		display: flex;
+		text-align: unset;
+		min-height: 341px;
+		/*display: grid;
+		text-align: unset;
+		grid-template-areas: 
+			'logo socialtsitle telephone';*/
+	}
+	.footer__social {
+		height: auto;
+		text-align: center;
+	}
+	.footer__copyright {
+		border-top: 1px solid #9F9E9E;
+		text-align: center;
+	}
+	.footer__copy-top {
+		margin-top: 14px;
+	}
+	.footer__top-row {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.footer__bottom {
+		margin-top: 30px;
+	}
+	.footer__logo span {
+		display: block;
+	}
+	.footer__contact {
+		height: 57px;
+		align-items: center;
+		text-align: right;
+	}
+	.footer__contact-top a {
+		padding-left: 10px;
+	}
+	/*.footer__logo img { grid-area: logo; }
+	.footer__social h3 { grid-area: socialtitle; }
+	.footer__contact-top { grid-area: telephone; }*/
+}
