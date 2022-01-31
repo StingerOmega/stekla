@@ -30,35 +30,25 @@
 }
 .icon-facebook:before {
   content: "\e901";
-  color: #fff;
-  font-size: 36px;
-}
-.icon-instagram:before {
-  content: "\e902";
-  color: #fff;
-  font-size: 36px;
-}
-.icon-mail:before {
-  content: "\e903";
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
 }
 .icon-phone:before {
   content: "\e904";
-  color: #fff;
-  font-size: 24px;
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-mail:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e904";
 }
 .icon-vk:before {
   content: "\e905";
-  color: #fff;
-  font-size: 36px;
 }
 .icon-WhatsApp:before {
   content: "\e906";
 }
 .icon-youtube:before {
   content: "\e907";
-  color: #fff;
-  font-size: 36px;
 }
