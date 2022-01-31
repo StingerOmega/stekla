@@ -228,6 +228,22 @@ footer p, footer h3{
 	color: #F24841;
 }
 
+.footer__social-list a:before {
+	color: #fff;
+  	font-size: 36px;
+}
+
+.footer__contact-top i:before {
+	color: #fff;
+  	font-size: 24px;
+}
+
+.footer__contact-bottom i:before {
+	color: #fff;
+  	font-size: 18px;
+ 	font-weight: 400;
+}
+
 /* медиа запросы для футера */
 
 @media (min-width: 750px)
