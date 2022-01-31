@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/icon.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Главная</title>
 </head>
@@ -12,19 +14,132 @@
 	</header>
 	<main>
 		<div class="container">
-			<section class="banner"></section>
-			<section class="advantages"></section>
+			<section class="banner">
+				<div class="banner__wrap">
+					<h3>Избавим от лишнего солнечного света и жары либо вернем деньги!</h3>
+					<div class="banner__btn">
+						<a href="#">Оставить заявку </a>
+						<img src="img/Arrow_1.png" alt="стрелка">
+					</div>
+				</div>
+			</section>
 
+			<section class="advantages">
+				<h2>Почему тонировка - это удобно и
+				 выгодно?</h2>
+				<div class="advantages__gridbox">
+					<div class="advantages__boxis__1 boxis">
+						<img src="img/condition.png" alt="Кондиционер">
+						<p>Экономия до 80% затрат на кондиционирование</p></div>
+
+					<div class="advantages__boxis__2 boxis">
+						<img src="img/sun.png" alt="Кондиционер">
+						<p>Блокировка вредных УФ-лучей до 98% и защита от солнца</p></div>
+
+					<div class="advantages__boxis__3 boxis">
+						<img src="img/divan.png" alt="Кондиционер">
+						<p>Сокращение перегрева в помещениях до 90%</p></div>
+
+					<div class="advantages__boxis__4 boxis">
+						<img src="img/monitor.png" alt="Кондиционер">
+						<p>Больше никаких бликов на экранах и мониторах</p></div>
+
+					<div class="advantages__boxis__5 boxis">
+						<img src="img/Vector.png" alt="Кондиционер">
+						<p>Забудьте о выгорании мебели от солнечного света</p></div>
+
+					<div class="advantages__boxis__6 boxis">
+						<img src="img/people.png" alt="Кондиционер">
+						<p>Создание эффекта односторонней видимости</p>
+					</div>
+				</div>
+			</section>
+			<section class="portfolio">
+				<h2 class="portfolio__title subtitle">Наши работы</h2>
+				<div class="swiper-container portfolioSwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="portfolio__slide-thumb">
+								<a href="#"><img src="img/portfolio/img1.jpg" alt='Монтаж солнцезащитной пленки в школе "Самбо 70"'></a>
+							</div>
+							<h3 class="portfolio__slide-title"><a href="#">Монтаж солнцезащитной пленки в школе "Самбо 70"</a></h3>
+						</div>
+						<div class="swiper-slide">
+							<div class="portfolio__slide-thumb">
+								<a href="#"><img src="img/portfolio/img2.jpg" alt='Плоттерная резка пленки AD 220+монтаж'></a>
+							</div>
+							<h3 class="portfolio__slide-title"><a href="#">Плоттерная резка пленки AD 220+монтаж</a></h3>
+						</div>
+						<div class="swiper-slide">
+							<div class="portfolio__slide-thumb">
+								<a href="#"><img src="img/portfolio/img3.jpg" alt='Монтаж зеркальной пленки: "ЖАВОРОНКИ ИВЭНТ"'></a>
+							</div>
+							<h3 class="portfolio__slide-title"><a href="#">Монтаж зеркальной пленки: "ЖАВОРОНКИ ИВЭНТ"</a></h3>
+						</div>
+						<div class="swiper-slide">
+							<div class="portfolio__slide-thumb">
+								<a href="#"><img src="img/portfolio/img4.jpg" alt='Пленка цвета "уголь" на перегородки'></a>
+							</div>
+							<h3 class="portfolio__slide-title"><a href="#">Пленка цвета "уголь" на перегородки</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<a href="#" class="portfolio__btn btn-strelka">Смотреть все работы</a>
+		</section>
 		</div>
 	</main>
 	<footer>
 		<div class="container">
-			<div class="footer__logo"></div>
-			<div class="footer__social"></div>
-			<div class="footer__contact"></div>
-			<div class="footer__copyright"></div>
+			<div class="footer__top-row">
+				<div class="footer__logo">
+					<img src="images/logo.png" alt="Логотип компании">
+					<p>Профессиональные тонирующие и защитные пленки</p>
+				</div>
+				<div class="footer__social">
+					<h3>Социальные сети</h3>
+					<ul class="footer__social-list">
+						<li class="social-list__item">
+							<a href="#" class="icon-vk"></a>
+						</li>
+						<li class="social-list__item">
+							<a href="#" class="icon-instagram"></a>
+						</li>
+						<li class="social-list__item">
+							<a href="#" class="icon-youtube"></a>
+						</li>
+						<li class="social-list__item">
+							<a href="#" class="icon-facebook"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__contact">
+					<div class="footer__contact-top">
+						<i class="icon-phone"></i>
+						<a href="tel:79271456782">+7 927 145 67 82</a>
+					</div>
+					<div class="footer__contact-bottom">
+						<i class="icon-mail"></i>
+						<a href="mailto:info@okna.ru">info@okna.ru</a>
+						<p>для заказов, вопросов и предложений</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__copyright">
+					<div class="footer__copy-top">
+						<p>Разработчик сайта : Брындин Н.</p>
+					</div>
+					<div class="footer__copy-bottom">
+						<p>© Все права защищены. 2022</p>
+						<a href="#">Политика персональных данных</a>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</footer>
+	<script src="js/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>	
 </body>
 </html>
