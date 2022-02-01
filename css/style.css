@@ -113,11 +113,57 @@ header a{
 .header__whatsApp::before{
 	padding-right: 12px;
 }
+/*Меню-бургер*/
 /* гланое меню */
 .mainmenu {
-	display: none;
+	background-color: #333333;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
+.menu-list {
+	display: flex;
+	flex-direction: column;
+}
+.menu-item {
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	list-style: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	border-bottom: 2px solid #fff;
+}
+.menu-item:hover{
+	background-color: #F24841;
+	border-bottom: none;
+}
+.menu-item:last-child{
+	border: none;
+}
+.current-menu-item {}
 
+@media(min-width: 767px){
+	.mainmenu {
+		border-bottom: 5px solid #F24841;
+	}
+	.menu-list{
+		width: 100%;
+		max-width: 920px;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.menu-item {
+		padding-right: 27px;
+		padding-left: 27px;
+		width: 100%;
+		white-space: nowrap;
+		border: none;
+		border-right: 2px solid #fff;
+	}
 .mainmenu-active { /* когда нажали на кнопку бургера */
 	display: block;
 	background-color: rgba(51, 51, 51, 1);
@@ -184,7 +230,8 @@ header a{
 /*Баннер*/
 
 .banner {
-
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .banner__wrap {
@@ -196,11 +243,12 @@ header a{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	background-color: rgba(51, 51, 51, 0.8);
+	background-color: rgba(51, 51, 51, .9);
 
 }
 
 .banner__wrap h3 {
+	color: #fff;
 	font-size: 24px;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -230,14 +278,17 @@ header a{
 
 
 .advantages {
-
+	margin-bottom: 30px;
 }
 
 .advantages h2 {
+	padding-top: 15px;
+	padding-bottom: 20px;
 	color: #333333;
 }
 
 .advantages__gridbox {
+	justify-content: center;
 	grid-gap: 20px;
 	display: grid;
 	grid-template-rows: repeat(6, 77px) ;
@@ -305,7 +356,7 @@ header a{
 	}
 
 	.advantages__gridbox {
-		justify-content: center;
+		
 	}
 	.advantages h2 {
 		text-align: center;
@@ -321,6 +372,7 @@ header a{
 		background-position: 50% ;
 	}
 	.banner__wrap {
+		background-color: rgba(51, 51, 51, 0.8);
 		justify-content: space-around;
 	}
 	.banner__wrap h3 {
@@ -336,6 +388,8 @@ header a{
 		margin-top: 60px;
 	}
 	.advantages h2 {
+		padding-top: 0;
+		padding-bottom: 0;
 		font-size: 30px;
 		text-align: center;
 	}
