@@ -118,10 +118,11 @@ header a{
 /*Меню-бургер*/
 
 .mainmenu {
+	background-color: #333333;
+	margin: 0 auto;
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	max-width: 1170px;
 }
 .menu-list {
 	display: flex;
@@ -140,12 +141,32 @@ header a{
 }
 .menu-item:hover{
 	background-color: #F24841;
-	border: none;
+	border-bottom: none;
 }
 .menu-item:last-child{
 	border: none;
 }
 .current-menu-item {}
+
+@media(min-width: 767px){
+	.mainmenu {
+		border-bottom: 5px solid #F24841;
+	}
+	.menu-list{
+		width: 100%;
+		max-width: 920px;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.menu-item {
+		padding-right: 27px;
+		padding-left: 27px;
+		width: 100%;
+		white-space: nowrap;
+		border: none;
+		border-right: 2px solid #fff;
+	}
+
 
 /*Баннер*/
 
@@ -163,7 +184,7 @@ header a{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	background-color: rgba(51, 51, 51, 1);
+	background-color: rgba(51, 51, 51, .9);
 
 }
 
