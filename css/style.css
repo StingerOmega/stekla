@@ -71,6 +71,118 @@ a{
 		font-size: 20px;
 	}
 }
+/*Header*/
+
+header{
+	background-color: #212121;
+}
+header a{
+	color: #fff;
+}
+.header__wrap{
+	display: grid;
+	padding-top: 50px;
+}
+.header__logo{
+	justify-self: center;
+}
+.header__lead{
+	max-width: 180px;
+  justify-self: center;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  line-height: 20px;
+}
+.header__phone{
+	padding-bottom: 30px;
+	font-size: 24px;
+	text-align: center;
+}
+.header__phone::before{
+	padding-right: 10px;	
+}
+.header__whatsApp{
+	background-color: #0DB614;
+	font-size: 24px;
+	border-radius: 7px;
+  text-align: center;
+  padding: 3px 7px;
+  justify-self: center;
+  align-self: center;
+}
+.header__whatsApp::before{
+	padding-right: 12px;
+}
+
+/* гланое меню */
+.mainmenu {
+	display: none;
+}
+
+.mainmenu-active { /* когда нажали на кнопку бургера */
+	display: block;
+	background-color: rgba(51, 51, 51, 1);
+	text-align: center;
+	/* не забыть добавить показ меню для пк версии сайта!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+} 
+/* бургер меню */
+
+.header__burger {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0 15px 0;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.btn-burger {
+	display: block;
+	max-width: 115px;
+	height: 28px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.btn-burger p {
+	padding-left: 40px;
+	color: #fff;
+}
+
+.btn-burger span,
+.btn-burger span::before,
+.btn-burger span::after {
+	position: absolute;
+	top: 50%;
+	width: 25px;
+	height: 2px;
+	background-color: #fff;
+	margin-top: -1px;
+}
+
+.btn-burger span::before,
+.btn-burger span::after {
+	content: '';
+	transition: .5s;
+}
+.btn-burger span::before {
+	transform: translateY(-7px);
+}
+.btn-burger span::after {
+	transform: translateY(7px);
+}
+/* активное бургер меню */
+.active span {
+	height: 0;
+}
+
+.active span:before {
+	transform: rotate(39deg);
+}
+
+.active span:after {
+	transform: rotate(-39deg);
+}
 
 /*Баннер*/
 
@@ -126,7 +238,6 @@ a{
 
 .advantages h2 {
 	color: #333333;
-;
 }
 
 .advantages__gridbox {
@@ -268,148 +379,6 @@ a{
 		font-size: 36px;
 	}
 }
-=======
-@media (min-width: 576px){
-	.container{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
-@media (min-width: 768px){
-	.container{
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-}
-@media (min-width: 1200px){
-	.container{
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-a{
-	text-decoration: none;
-}
-.subtitle{
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 28px;
-}
-.btn-strelka{
-	display: block;
-	position: relative;
-	border: 1px solid #F24841;
-	padding-left: 20px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	color: #F24841;
-	font-weight: 500;
-	font-size: 16px;
-}
-.btn-strelka:hover{
-	text-decoration: underline;
-}
-.btn-strelka::before{
-	content: '';
-	position: absolute;
-	font-family: 'icon';
-	color: #F24841;
-	right: 15px;
-	top: 17px;
-}
-@media(min-width: 300px){
-	.btn-strelka::before{
-		content: '\e900';
-	}
-}
-@media(min-width: 576px){
-	.btn-strelka{
-		font-size: 20px;
-	}
-}
-
-
-
-/*Портфолио*/
-.portfolio__title{
-	margin-bottom: 30px;
-}
-.portfolio__slide-title{
-	font-size: 16px;
-	font-weight: 400;
-	padding: 10px 7px 7px;
-	text-align: center;
-}
-.portfolio .swiper-slide:hover .portfolio__slide-title{
-	background-color: #F24841;
-}
-.portfolio .swiper-slide:hover .portfolio__slide-title a{
-	color: #fff;
-}
-.portfolioSwiper{
-	width: 230px;
-	margin: 0 auto;
-}
-.portfolioSwiper .portfolio__slide-thumb{
-	position: relative;
-	padding: 0 0 126%;
-}
-.portfolioSwiper .portfolio__slide-thumb img{
-	position: absolute;
-	height: 100%;
-	object-fit: cover;
-	position: absolute;
-	width: 100%;
-}
-.portfolio .swiper-pagination-bullet{
-	width: 15px;
-	height: 15px;
-	background: #fff;
-  opacity: 1;
-  border: 1px solid #F24841;
-}
-.portfolio .swiper-pagination-bullet-active{
-	background: #F24841;
-}
-.portfolio .swiper-pagination-bullet:not(:first-child){
-	margin-left: 10px;
-}
-.portfolio .swiper-pagination{
-	left: 50%;
-	transform: translateX(-50%);
-	margin-top: 10px;
-}
-.portfolio .portfolio__btn{
-	margin-top: 45px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 250px;
-}
-@media (min-width: 576px){
-	.portfolioSwiper{
-		width: 500px;
-	}
-	.portfolio .portfolio__btn{
-		margin-left: 20px;
-		max-width: 300px;
-	}
-}
-
-@media (min-width: 992px){
-	.portfolioSwiper{
-		width: 770px;
-	}
-
-}
-@media (min-width: 1170px){
-	.portfolioSwiper{
-		width: 1130px;
-	}
-	.portfolio .swiper-pagination{
-		display: none;
-	}
-}
-
 
 /*Портфолио*/
 .portfolio__title{
@@ -563,22 +532,6 @@ footer p, footer h3{
 	font-weight: 500;
 	text-decoration: none;
 	color: #F24841;
-}
-
-.footer__social-list a:before {
-	color: #fff;
-  	font-size: 36px;
-}
-
-.footer__contact-top i:before {
-	color: #fff;
-  	font-size: 24px;
-}
-
-.footer__contact-bottom i:before {
-	color: #fff;
-  	font-size: 18px;
- 	font-weight: 400;
 }
 
 /* медиа запросы для футера */
