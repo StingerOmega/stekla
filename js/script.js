@@ -21,15 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
           clickable: true,
         },
       });
+  //реакция на клик по кнопке бургера
 
+const btnBurger = document.querySelector('.btn-burger'),
+      menu = document.querySelector('.mainmenu');
+
+btnBurger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    btnBurger.classList.toggle('active');
+});
 })
-
-//реакция на клик по кнопке бургера
-
-const btn = document.querySelector('.btn-burger');
-const menu = document.querySelector('.mainmenu');
-
-btn.onclick = () => {
-    menu.classList.toggle('mainmenu-active');
-    btn.classList.toggle('active');
-}
