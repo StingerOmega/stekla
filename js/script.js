@@ -30,4 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('active');
         btnBurger.classList.toggle('active');
     });
+
+    //Модальное окно
+
 })
