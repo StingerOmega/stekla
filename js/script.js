@@ -23,11 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   //реакция на клик по кнопке бургера
 
-const btnBurger = document.querySelector('.btn-burger'),
-      menu = document.querySelector('.mainmenu');
+    const btnBurger = document.querySelector('.btn-burger'),
+          menu = document.querySelector('.mainmenu');
 
-btnBurger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    btnBurger.classList.toggle('active');
-});
+    btnBurger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        btnBurger.classList.toggle('active');
+    });
+
+    //Модальное окно
+
 })
