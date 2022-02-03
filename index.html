@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/icon.css">
-	<link rel="stylesheet" href="css/MagnificPopup.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Главная</title>
 </head>
@@ -38,7 +37,7 @@
 		<section class="banner">
 				<div class="banner__wrap">
 					<h3>Избавим от лишнего солнечного света и жары либо вернем деньги!</h3>
-					<a class="btn-strelka banner__btn" href="#zayavka-form">Оставить заявку</a>
+					<a class="btn-strelka banner__btn popup-link" href="#popup">Оставить заявку</a>
 				</div>
 			</section>			
 			<section class="advantages">
@@ -111,19 +110,26 @@
 			<p>Планируете использовать тонировку, чтобы оригинально оформить витрину, улучшить внешний вид фасада здания или защитить от сторонних взглядов окна в доме либо офисе? Закажите качественное покрытие и воплотите свои планы в жизнь. У нас вы купите универсальные архитектурные пленки напрямую от производителя по оптимальной цене.</p>
 			<p>Компания доставит заказанную продукцию по указанному адресу в оговоренные сроки. Опытные монтажники установят тонировку быстро и без перерасхода материала, независимо от сложности конструкции.</p>
 			<p>Чтобы узнать, во сколько обойдется продукция, а также ее монтаж, закажите обратный звонок. Квалифицированный сотрудник поможет определиться с выбором и примет заказ.</p>
-		</section>
-			<form action="#" id="zayavka-form" class="" method="post">
-				<h2 class="subtitle">Lorem ipsum dolor</h2>
-				<div class="forma__input">
-					<input type="text" placeholder="Имя" id="name" required>
-					<input type="tel" placeholder="Номер телефона" id="tel" required>
+		</section>			
+	</main>
+	<div id="popup" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="" class="popup__close close-popup">х</a>
+				<form action="#" id="zayavka-form" class="" method="post">
+				<h2 class="subtitle">Заполните форму</h2>
+				<div class="form__input">
+					<input type="text" placeholder="Имя" name="name" required>
+					<input type="tel" placeholder="Номер телефона" name="tel" required>
 				</div>
-				<textarea name="forma__textarea" placeholder="Ваше сообщение..." required></textarea>
-				<div class="btn">
-					<input type="submit" value="Отправить">
+				<textarea name="form__textarea" placeholder="Текст заявки..." name="text"></textarea>
+				<div class="form__btn">
+					<input type="submit" class="btn-strelka" value="Отправить">
 				</div>
 			</form>
-	</main>
+			</div>
+		</div>
+	</div>
 	<footer>
 		<div class="container">
 			<div class="footer__top-row">
