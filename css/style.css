@@ -571,7 +571,12 @@ header a{
 	}
 }
 
-.forma__btn {}
+/* page portfolio */
+
+.page-portfolio__items{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
 /* footer */
 footer {
 	background-color: #212121;
