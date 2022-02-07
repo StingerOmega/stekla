@@ -510,6 +510,9 @@ header a{
 	color: #F24841;
 	font-size: 18px;
 }
+.breadcrumb li:first-line{
+	padding-left: 0;
+}
 .breadcrumb span{
 	color: #F24841;
 	font-size: 18px;
@@ -774,7 +777,6 @@ footer p, footer a, footer h3{
 	font-weight: 700;
 }
 
-.footer__contact-bottom {}
 .footer__contact-bottom a {
 	font-size: 18px;
 }
@@ -808,9 +810,6 @@ footer p, footer a, footer h3{
   	font-size: 18px;
  	font-weight: 400;
 }
-
-
-
 @media (min-width: 750px)
 {
 	footer {
