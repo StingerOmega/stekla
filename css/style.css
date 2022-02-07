@@ -485,6 +485,35 @@ header a{
 		display: none;
 	}
 }
+/* Хлебные крошки */
+.breadcrumb{
+	margin-top: 25px;
+	margin-bottom: 20px;
+	color: #F24841;	
+}
+.breadcrumb ul{
+	list-style: none;	
+}
+.breadcrumb li{
+	display: inline-block;
+	position: relative;
+	text-transform: uppercase;
+}
+.breadcrumb li:not(:first-child){
+	padding-left: 20px;
+}
+.breadcrumb li:not(:last-child)::before{
+	content: '|';
+	position: absolute;
+	top: 0;
+	right: -12px;
+	color: #F24841;
+	font-size: 18px;
+}
+.breadcrumb span{
+	color: #F24841;
+	font-size: 18px;
+}
 /*aboutzakaz*/
 .aboutzakaz{
 	margin-top: 40px;
@@ -661,7 +690,7 @@ footer {
 	padding-bottom: 40px;
 }
 
-footer p, footer h3{
+footer p, footer a, footer h3{
 	color: #fff;
 }
 
@@ -780,3 +809,4 @@ footer p, footer h3{
 	}
 
 }
+
