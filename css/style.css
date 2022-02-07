@@ -6,6 +6,9 @@
 	font-family: 'Roboto', sans-serif;
 	color: #333;
 }
+body.lock{
+	overflow: hidden;
+}
 .container{
 	width: 100%;
 	max-width: 1170px;
@@ -498,80 +501,203 @@ header a{
 }
 }
 
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+}
+.popup.open{
+	opacity: 1;
+	visibility: visible;
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	background-color: #fff;
+	max-width: 800px;
+	padding: 30px 15px;
+	position: relative;
+}
+.popup__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	color: #F24841;
+}
+
+
 /* forma */
-.forma {
+#zayavka-form {
 	width: 100%;
 	height: 100%;
 }
 
-.forma__input {
+.form__input {
 	margin-top: 20px
 }
-.forma textarea {
+#zayavka-form textarea {
 	width: 100%;
-	height: 163px;
+	height: 160px;
+	padding: 15px;
+	font-size: 18px;
 }
-.forma__input input{
+.form__input input{
 	width: 100%;
 	max-height: 40px;
-	font-size: 20px;
+	font-size: 18px;
 	margin-bottom: 5px;
 	padding: 15px;
 }
 
-.forma input,
-.forma textarea {
-	color: #000;
-	border: 1px solid #000;
-}
 
-.forma textarea {
-	border-radius: unset;
-	padding: 5px;
-	resize: none;
-}
-
-.forma__btn {
+.form__btn {
+	margin-top: 15px;
 	display: flex;
 	justify-content: center;
 }
-
-.forma__btn input {
-	margin-top: 15px;
-	width: 50%;
-	border: 1px solid #F24841;
-	background: unset;
-    color: #F24841;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.form__btn input{
+	max-width: 300px;
+	width: 100%;
+	background-color: unset;
+	cursor: pointer;
+	padding-left: 0;
+}
+.form__btn input:hover{
+	text-decoration: none;
 }
 
-/* медиа запросы для формы */
-@media (min-width: 750px) {
-	.forma__input {
-		display: flex;
-		justify-content: space-between;
+
+/* page portfolio */
+
+.page-portfolio__items{
+	grid-gap: 80px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 230px);
+}
+
+.page-portfolio__item {
+	text-align: center;
+	width: 230px;
+}
+
+.page-portfolio__item:hover {
+	background-color: #F24841;
+}
+
+.page-portfolio__item:hover a{
+	color: #fff;
+}
+
+.page-portfolio__item h3{
+	height: 55px;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.page-portfolio__thumb {
+	padding: 0px 0px 290px 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+.page-portfolio__thumb img{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.page-portfolio__title {
+	height: 100%;
+	padding: 0px 10px 0px 10px;
+	margin-bottom: 5px;
+}
+
+/* портфолио одиночная страница */
+.breadcrumb {
+	margin-top: 30px;
+}
+
+.breadcrumb ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 18px;
+	text-transform: uppercase;
+	min-width: 330px;
+}
+
+.breadcrumb span {
+	color: #F24841;
+}
+
+.breadcrumb span:after {
+	content: '|';
+	padding: 0 4px;
+}
+
+.portfolio-post {
+	margin-top: 20px;
+}
+
+.portfolio-post__content {
+	margin: 20px 0;
+	min-width: 330px;
+}
+
+.portfolio-post__content p {
+	margin: 0;
+	padding: 0;
+}
+
+portfolio-post__gallary {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    
+
+.gallarybox img{
+	width: 160px;
+	height: 200px;
+}
+
+@media (min-width: 354px) {
+	portfolio-post__gallary {
+		display: inline;
 	}
-	.forma__input input{
-		width: 50%;
+	.gallarybox {
+		padding-top: 10px;
 	}
-	.forma__input input:not(:last-child)
-	{
-		margin-right: 5px;
+	.gallarybox:not(:last-child) {
+		padding-right: 10px;
 	}
 }
 
-@media (min-width: 365px) {
-	.forma__btn input {
-		text-align: center;
-	}
+.portfolio-post__options {
+	margin-top: 30px;
 }
 
-.forma__btn {}
+.portfolio-post__options ul{
+	font-size: 16px;
+    margin-left: 26px;
+    max-width: 329px;
+}
+
 /* footer */
 footer {
 	background-color: #212121;

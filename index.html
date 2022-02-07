@@ -38,7 +38,28 @@
 		<section class="banner">
 				<div class="banner__wrap">
 					<h3>Избавим от лишнего солнечного света и жары либо вернем деньги!</h3>
-					<a class="btn-strelka banner__btn" href="#zayavka-form">Оставить заявку</a>
+					<a class="btn-strelka banner__btn popup-form-link" href="#">Оставить заявку</a>
+				</div>
+				<div class="banner__popup" id="banner__popup">
+					<div class="popup__body">
+						<div class="popup__content">
+							<a href="#" class="popup__close close-popup">X</a>
+							<div class="popup__title">
+								<h2 class="subtitle">Lorem</h2>
+							</div>
+							<div class="popup__basic">
+								<form>
+									<div class="basic__inputs">
+										<input type="text" name="name" required placeholder="Имя">
+										<input type="tel" name="telephone" required placeholder="Телефон">
+									</div>
+									<div class="basic__btn close-popup">
+										<input type="submit" value="Отправить">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>					
 				</div>
 			</section>			
 			<section class="advantages">
@@ -174,6 +195,7 @@
 		</div>
 	</footer>
 	<script src="js/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>	
+	<script src="js/script.js"></script>
+	<script src="js/MagnificPopup.min.js"></script>
 </body>
 </html>
