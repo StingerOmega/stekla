@@ -578,7 +578,6 @@ header a{
 }
 
 /* page portfolio */
-
 .page-portfolio__items{
 	grid-gap: 30px 80px;
 	display: grid;
@@ -650,6 +649,47 @@ header a{
 		max-width: 1200px;
 		padding-left: 20px;
 	}
+
+
+/* портфолио одиночная страница */
+.portfolio-post {
+	margin-top: 20px;
+}
+.portfolio-post__content {
+	margin: 20px 0;
+	min-width: 330px;
+}
+.portfolio-post__content p {
+	margin: 0;
+	padding: 0;
+}
+portfolio-post__gallary {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallarybox img{
+	width: 160px;
+	height: 200px;
+}
+@media (min-width: 354px) {
+	portfolio-post__gallary {
+		display: inline;
+	}
+	.gallarybox {
+		padding-top: 10px;
+	}
+	.gallarybox:not(:last-child) {
+		padding-right: 10px;
+	}
+}
+.portfolio-post__options {
+	margin-top: 30px;
+}
+.portfolio-post__options ul{
+	font-size: 16px;
+    margin-left: 26px;
+    max-width: 329px;
 }
 
 /* footer */
