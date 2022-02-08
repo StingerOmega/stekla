@@ -681,7 +681,7 @@ header a{
 		max-width: 1200px;
 		padding-left: 20px;
 	}
-
+}
 
 /* портфолио одиночная страница */
 .portfolio-post {
@@ -689,23 +689,63 @@ header a{
 }
 .portfolio-post__content {
 	margin: 20px 0;
-	min-width: 330px;
+	max-width: 330px;
 }
 .portfolio-post__content p {
 	margin: 0;
 	padding: 0;
 }
 portfolio-post__gallary {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	/*display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
+	grid-column-gap: 10px;*/
 }
-.gallarybox img{
+
+/*@media (max-width: 360px) {
+	portfolio-post__gallary {
+		grid-template-areas: 
+			'img img';
+		justify-content: center;
+	}
+}*/
+
+@media(min-width: 576px){
+	portfolio-post__gallary {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 205px));
+    	justify-content: center;
+	}
+	
+}
+
+@media(min-width: 905px) {
+	portfolio-post__gallary {
+		grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    	justify-content: start;
+	}
+	
+}
+
+@media (max-width: 315px) {
+	portfolio-post__gallary {
+		justify-content: center;
+		grid-column-gap: 5px;
+	}
+	
+}
+
+portfolio-post__gallary {
 	width: 160px;
 	height: 200px;
+	position: relative;
+}
+
+.gallarybox img{
+	/*grid-area: img;*/
+	width: 100%;
+	height: 100%;
 }
 @media (min-width: 354px) {
-	portfolio-post__gallary {
+	.portfolio-post__gallary {
 		display: inline;
 	}
 	.gallarybox {
@@ -722,6 +762,86 @@ portfolio-post__gallary {
 	font-size: 16px;
     margin-left: 26px;
     max-width: 329px;
+}
+
+
+/*Автор*/
+.avtor{
+	display: grid;
+}
+.avtor__img-box{
+	width: 200px;
+	height: 200px;
+	margin: 20px auto;	
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+}
+.avtor__img-box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.avtor ul{
+	padding-left: 20px;
+}
+
+
+@media (min-width: 576px){
+	.avtor{
+		grid-template-columns: 1fr 200px;
+		grid-gap: 15px;
+	}
+	.avtor .subtitle{
+		grid-column: 1 / 3;
+	}
+	.avtor .avtor__content{
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		margin-top: 30px;
+	}
+	.avtor__img-box{
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		margin: 0 auto;
+	}
+}
+
+
+@media (min-width: 992px){
+	.avtor{
+		grid-template-columns: 1fr 430px;
+		grid-gap: 30px;
+	}
+	.avtor__img-box{
+		width: 430px;
+		height: 430px;
+	}
+	.avtor .avtor__content{
+		margin-top: 50px;
+	}
+}
+
+/*page*/
+.page .subtitle{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.page ul{
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.page .is-provider-youtube .wp-block-embed__wrapper{
+	display: flex;
+	justify-content: center;
+}
+.page .is-provider-youtube iframe{
+	width: 100%;
+	max-width: 500px;
 }
 
 /* footer */
