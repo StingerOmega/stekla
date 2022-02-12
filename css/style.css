@@ -297,7 +297,6 @@ header a{
 	margin-right: 15px;
 	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.33);
 }
-
 .banner__btn {
 	max-width: 250px;
 	min-width: 190px;
@@ -312,8 +311,6 @@ header a{
 .banner .banner__btn::before{
 	color: #fff;
 }
-
-
 @media(min-width: 550px){
 	.banner__wrap {
 		height: 350px;
@@ -615,35 +612,28 @@ header a{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
-
 .page-portfolio__item {
 	text-align: center;
 	margin: 0 auto; 
 	width: 100%;
 	max-width: 230px;
 }
-
 .page-portfolio__item:hover {
 	background-color: #F24841;
 }
-
 .page-portfolio__item:hover a{
 	color: #fff;
 }
-
 .page-portfolio__item h3{
 	height: 55px;
 	margin-top: 5px;
 	font-size: 16px;
 }
-
-
 .page-portfolio__thumb {
 	padding: 0px 0px 290px 0px;
 	overflow: hidden;
 	position: relative;
 }
-
 .page-portfolio__thumb img{
 	margin: 0 auto;
 	width: 100%;
@@ -653,13 +643,11 @@ header a{
 	top: 0;
 	left: 0;
 }
-
 .page-portfolio__title {
 	height: 100%;
 	padding: 0px 10px 0px 10px;
 	margin-bottom: 5px;
 }
-
 @media(min-width: 768px){
 	.page-portfolio__items{
 		width: 600px;
@@ -695,97 +683,62 @@ header a{
 	margin: 0;
 	padding: 0;
 }
-portfolio-post__gallary {
-	/*display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
-	grid-column-gap: 10px;*/
+.portfolio-post ul{
+	padding-left: 20px;
 }
 
-/*@media (max-width: 360px) {
-	portfolio-post__gallary {
-		grid-template-areas: 
-			'img img';
-		justify-content: center;
-	}
-}*/
-
-@media(min-width: 576px){
-	portfolio-post__gallary {
-		grid-template-columns: repeat(auto-fit, minmax(100px, 205px));
-    	justify-content: center;
-	}
-	
+.portfolio-post__gallary{
+	display: grid;
+	grid-gap: 10px;
+	justify-content: center;
+	margin-bottom: 30px;
 }
-
-@media(min-width: 905px) {
-	portfolio-post__gallary {
-		grid-template-columns: repeat(auto-fit, minmax(270px, auto));
-    	justify-content: start;
-	}
-	
-}
-
-@media (max-width: 315px) {
-	portfolio-post__gallary {
-		justify-content: center;
-		grid-column-gap: 5px;
-	}
-	
-}
-
-portfolio-post__gallary {
-	width: 160px;
-	height: 200px;
+.portfolio-post__gallary-imgbox{
+	min-width: 150px;
+	margin: 0 auto;
+	padding: 0px 0px 200px 0px;
+	overflow: hidden;
 	position: relative;
 }
-
-.gallarybox img{
-	/*grid-area: img;*/
+.portfolio-post__gallary-imgbox img{
+	margin: 0 auto;
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-@media (min-width: 354px) {
-	.portfolio-post__gallary {
-		display: inline;
+@media (min-width: 300px){
+	.portfolio-post__gallary{
+		grid-template-columns: repeat(auto-fit, minmax(150px, 180px));	
+	}
+	.portfolio-post__gallary-imgbox{
+		margin: 0;		
 	}
 }
-
-@media (max-width: 350px) {
-	.gallarybox img {
-		width: 120px;
-		height: 100%;
+@media (min-width: 576px){
+	.portfolio-post__gallary{
+		grid-template-columns: repeat(auto-fit, minmax(230px, 270px));	
+	}
+	.portfolio-post__gallary-imgbox{
+		padding: 0px 0px 250px 0px;		
 	}
 }
-
-@media (max-width: 270px) {
-	.gallarybox img {
-		width: 90px;
+@media (min-width: 768px){
+	.portfolio-post__gallary{		
+		grid-gap: 20px;
+	}
+	.portfolio-post__gallary{
+		grid-template-columns: repeat(auto-fit, minmax(260px, 270px));	
+	}
+	.portfolio-post__gallary-imgbox{
+		padding: 0px 0px 250px 0px;		
 	}
 }
-
-@media (min-width: 800px) {
-	.gallarybox img {
-		width: 269px;
-		height: 100%;
-	}
-	portfolio-post__gallary {
-		grid-template-columns: repeat(auto-fit, minmax(100px, 269px));
-	}
-}
-
-
-.portfolio-post__options {
-	margin-top: 30px;
-}
-.portfolio-post__options ul{
-	font-size: 16px;
-    margin-left: 26px;
-    max-width: 329px;
-}
-
 /* отзывы */
 
-.review__block {
+/*.review__block {
 	background-color: #333333;
 	border-radius: 5px;
 }
@@ -796,14 +749,16 @@ portfolio-post__gallary {
 }
 
 .review__container {
-	display: flex;
-	justify-content: space-between;
+	display: flex;	
+	flex-wrap: wrap-reverse;
+	justify-content: center;
 }
 
 .review__left {
 	padding-top: 30px;
 	padding-left: 11px;
 	padding-bottom: 35px;
+
 }
 
 .review__aftor h3 {
@@ -889,7 +844,6 @@ portfolio-post__gallary {
 	    padding-left: 5.5px;
 	}
 }
-
 @media (min-width: 1000px)
 {
 	.review__avatar img {
@@ -900,7 +854,6 @@ portfolio-post__gallary {
 		width: 100%;
 	}
 }
-
 @media (min-width: 805px) {
 	.review__avatar img {
 		height: 199px;
@@ -910,16 +863,10 @@ portfolio-post__gallary {
 	}
 }
 
-@media (max-width: 320px) {
-	.review__avatar {
-		display: none;
-	}
-}
 
 .review__block:not(:last-child) {
 	margin-bottom: 27px;
-
-
+}*/
 /*Автор*/
 .avtor{
 	display: grid;
