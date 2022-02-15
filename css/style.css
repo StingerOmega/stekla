@@ -737,136 +737,83 @@ header a{
 	}
 }
 /* отзывы */
-
-/*.review__block {
-	background-color: #333333;
-	border-radius: 5px;
+.reviews .review__block{
+	display: grid;
+	background-color: #333;
+	grid-gap: 10px;
+	border-radius: 10px;
+	padding-bottom: 20px;	
+	margin-bottom: 30px;	
 }
-
-.review__block h3,
-.review__block p {
+.reviews h3.review__aftor{
 	color: #fff;
-}
-
-.review__container {
-	display: flex;	
-	flex-wrap: wrap-reverse;
-	justify-content: center;
-}
-
-.review__left {
-	padding-top: 30px;
-	padding-left: 11px;
-	padding-bottom: 35px;
-
-}
-
-.review__aftor h3 {
-	font-weight: 500;
+	text-align: center;
+	padding-top: 20px;
 	font-size: 18px;
-	text-transform: uppercase;
+	font-weight: 500;
+	text-transform: uppercase;	
 }
-
-.review__avatar img {
+.reviews .review__ball{
+	width: 100px;	
+	height: 20px;
+	margin-left: 20px;
+	background-size: 200px 20px; 
+	background-repeat: 	no-repeat;			
+}
+.reviews .review__avatar{
+	margin: 0 auto;	
+	width: 150px;	
+	padding: 0px 0px 150px 0px;
+	overflow: hidden;
+	position: relative;
+}
+.reviews .review__avatar img{
 	width: 100%;
-	height: 158px;
-	background: linear-gradient(0deg, rgba(33, 33, 33, 0.22), rgba(33, 33, 33, 0.22));
-	border-radius: 5px;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-
-.review__stars {
-	padding-top: 5px;
-	padding-bottom: 10px;
+.reviews .review__content p{
+	color: #fff;
+	padding: 5px 10px;
+	font-weight: 400;	
 }
-
-.star {
-  display: inline-block;
-  vertical-align: top;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(to bottom, rgba(197, 196, 196, 1) 0%, rgba(180, 179, 178, 1) 100%);
-  position: relative;
-}
-
-.star:before {
-  content: '';
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  bottom: 1px;
-  right: 1px;
-  background: linear-gradient(to bottom, rgba(221, 220, 219, 1) 0%, rgba(209, 208, 206, 1) 100%);
-  z-index: 1;
-}
-
-.star,
-.star:before {
-  -webkit-clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%);
-  clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%);
-}
-
-.star:hover {
-  background: linear-gradient(to bottom, rgba(224, 194, 75, 1) 0%, rgba(207, 125, 0, 1) 100%);
-}
-
-.star:hover:before {
-  background: linear-gradient(to bottom, rgba(243, 212, 85, 1) 0%, rgba(238, 164, 0, 1) 100%);
-}
-
-.star-active {
-	background: linear-gradient(to bottom, rgba(224, 194, 75, 1) 0%, rgba(207, 125, 0, 1) 100%);
-}
-.star-active:before {
-	background: linear-gradient(to bottom, rgba(243, 212, 85, 1) 0%, rgba(238, 164, 0, 1) 100%);
-}
-
-.review__content {
-	font-size: 12px;
-	max-width: 186px;
-}
-
-@media (min-width: 445px) {
-	.review__content {
-		max-width: 240px;
+@media (min-width: 576px){
+	.reviews .review__block{		
+		grid-template-columns: 1fr 180px;
+	}
+	.reviews .review__aftor{
+		grid-column: 1/2;
+	}
+	.reviews .review__ball{
+		grid-column: 1/2;
+	}
+	.reviews .review__content{
+		grid-column: 1/2;
+	}
+	.reviews .review__avatar{
+		margin-top: 30px;	
+		grid-column: 2/3;
+		grid-row: 1/4;
+	}
+	.reviews .review__avatar img{
+		height: 150px;
 	}
 }
-
-@media (min-width: 520px) {
-	.review__content {
-		max-width: 300px;
+@media (min-width: 768px){
+	.reviews .review__block{		
+		grid-template-columns: 1fr 250px;
 	}
-}
-
-@media (min-width: 768px) {
-	.review__content {
-		max-width: 500px;
-	    font-size: 13px;
-	    padding-left: 5.5px;
+	.reviews .review__avatar img{
+		height: 230px;
 	}
-}
-@media (min-width: 1000px)
-{
-	.review__avatar img {
+	.reviews .review__avatar{
 		width: 230px;
-	}
-	.review__content {
-		max-width: none;
-		width: 100%;
+		padding: 0px 0px 230px 0px;
 	}
 }
-@media (min-width: 805px) {
-	.review__avatar img {
-		height: 199px;
-	}
-	.review__avatar {
-		padding: 8px 16px 0 0;
-	}
-}
-
-
-.review__block:not(:last-child) {
-	margin-bottom: 27px;
-}*/
 /*Автор*/
 .avtor{
 	display: grid;
