@@ -783,6 +783,7 @@ header a{
 @media (min-width: 576px){
 	.reviews .review__block{		
 		grid-template-columns: 1fr 180px;
+		grid-template-rows: 50px 30px 1fr;
 	}
 	.reviews .review__aftor{
 		grid-column: 1/2;
@@ -892,6 +893,29 @@ header a{
 	width: 100%;
 	max-width: 500px;
 
+}
+/*Пагинация*/
+.page-nav{
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+.page-nav .page-numbers{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F24841;
+	color: #fff;
+	font-weight: 500;
+}
+.page-nav .page-numbers:not(:first-child){
+	margin-left: 10px;
+}
+.page-nav .page-numbers.current{
+	background-color: #ED8B87;
 }
 
 /* footer */
